@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ImageCompression</title>
+    <script asp-src-include="lib/jquery/dist/jquery.js"></script>
+    <script asp-src-include="lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script asp-src-include="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-hero.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/fontawesome/css/all.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+    </environment>
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-start header-col">
+                <a asp-area=""
+                   asp-controller="Home" asp-action="Index" class="navbar-brand"><h2>ImageCompression application</h2></a>
+
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark navbar-expand-md bg-navbar-blue">
+        <div class="container">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">Skompresuj obrazy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Logs" class="nav-link">Logi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Contact" class="nav-link">Kontakt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Settings" class="nav-link">Ustawienia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer class="footer page-footer font-small indigo">
+            <div class="footer-copyright text-center ">
+                <hr />
+                <p>&copy; 2019 - ImageCompression</p>
+            </div>
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap-hero.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+
+</html>

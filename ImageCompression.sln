@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B666B4CA-A7B7-412F-BD0F-53E49BABD687}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCompression", "ImageCompression\ImageCompression.csproj", "{292D3787-4330-4BA6-B0B8-3DCDE2D4A619}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCompression.Model", "ImageCompression.Model\ImageCompression.Model.csproj", "{BEE217B7-740C-42AC-818F-FB32819C5A11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCompression.Repository", "ImageCompression.Repository\ImageCompression.Repository.csproj", "{7FEDFD66-05C3-44A8-8BBB-64F9AF0F3223}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCompression.Service", "ImageCompression.Service\ImageCompression.Service.csproj", "{2D8CD747-78A9-458D-9EE7-4F6CACC55C76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageCompression.UnitTests", "ImageCompression.UnitTests\ImageCompression.UnitTests.csproj", "{77E4F45D-06E0-4568-9B45-4F877302E9FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{292D3787-4330-4BA6-B0B8-3DCDE2D4A619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292D3787-4330-4BA6-B0B8-3DCDE2D4A619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292D3787-4330-4BA6-B0B8-3DCDE2D4A619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292D3787-4330-4BA6-B0B8-3DCDE2D4A619}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE217B7-740C-42AC-818F-FB32819C5A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE217B7-740C-42AC-818F-FB32819C5A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE217B7-740C-42AC-818F-FB32819C5A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE217B7-740C-42AC-818F-FB32819C5A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEDFD66-05C3-44A8-8BBB-64F9AF0F3223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEDFD66-05C3-44A8-8BBB-64F9AF0F3223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEDFD66-05C3-44A8-8BBB-64F9AF0F3223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEDFD66-05C3-44A8-8BBB-64F9AF0F3223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8CD747-78A9-458D-9EE7-4F6CACC55C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8CD747-78A9-458D-9EE7-4F6CACC55C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8CD747-78A9-458D-9EE7-4F6CACC55C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8CD747-78A9-458D-9EE7-4F6CACC55C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E4F45D-06E0-4568-9B45-4F877302E9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E4F45D-06E0-4568-9B45-4F877302E9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E4F45D-06E0-4568-9B45-4F877302E9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E4F45D-06E0-4568-9B45-4F877302E9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{292D3787-4330-4BA6-B0B8-3DCDE2D4A619} = {B666B4CA-A7B7-412F-BD0F-53E49BABD687}
+		{BEE217B7-740C-42AC-818F-FB32819C5A11} = {B666B4CA-A7B7-412F-BD0F-53E49BABD687}
+		{7FEDFD66-05C3-44A8-8BBB-64F9AF0F3223} = {B666B4CA-A7B7-412F-BD0F-53E49BABD687}
+		{2D8CD747-78A9-458D-9EE7-4F6CACC55C76} = {B666B4CA-A7B7-412F-BD0F-53E49BABD687}
+		{77E4F45D-06E0-4568-9B45-4F877302E9FA} = {B666B4CA-A7B7-412F-BD0F-53E49BABD687}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE997F9E-65CE-4A88-86AA-C88F5118E385}
+	EndGlobalSection
+EndGlobal

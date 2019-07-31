@@ -1,0 +1,126 @@
+﻿@model ImageCompression.ViewModel.SettingsVM
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<h2>Ustawienia</h2>
+
+<script>
+    function addItem() {
+        var li = document.createElement("li");
+        var divButton = document.createElement("div");
+        var button = document.createElement("button");
+        button.className = "btn btn-outline-info";
+        button.id = "delete";
+        button.type = "button";
+        button.onclick = "deleteItem();";
+        divButton.className = "input-group-append";
+        divButton.appendChild(button);
+        var input = document.getElementById("userinput");
+        var ul = document.querySelector(".list-group");
+        li.className = 'list-group-item';
+        li.textContent = input.value;
+        li.appendChild(divButton);
+        ul.appendChild(li);
+    }
+</script>
+<div class="row">
+    <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Wysyłka metadanych</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profil</a>
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                <form asp-action="RegisterPatient" asp-controller="Account" method="post" class="form-horizontal">
+
+                    <div class="form-group">
+                        <label asp-for="smtpServer" class="col-md-2 control-label"></label>
+                        <div class="col-md-10">
+                            <input asp-for="smtpServer" class="form-control" />
+                            <span asp-validation-for="smtpServer" class="text-danger"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="smtpPort" class="col-md-2 control-label"></label>
+                        <div class="col-md-10">
+                            <input asp-for="smtpPort" class="form-control" />
+                            <span asp-validation-for="smtpPort" class="text-danger"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="smtpUserName" class="col-md-2 control-label"></label>
+                        <div class="col-md-10">
+                            <input asp-for="smtpUserName" class="form-control" />
+                            <span asp-validation-for="smtpUserName" class="text-danger"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="password" class="col-md-2 control-label"></label>
+                        <div class="col-md-10">
+                            <input asp-for="password" class="form-control" />
+                            <span asp-validation-for="password" class="text-danger"></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+
+
+
+                        <div class="container">
+                            <div class="row justify-center">
+                                <div class="col-12">
+
+                                    <label asp-for="emailRecipients" class="col-md-2 control-label"></label>
+
+                                    <div class="input-group mb-3">
+                                        <input asp-for="emailRecipients" id="userinput" type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-info" id="enter" type="button" onclick="addItem();">+</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12">
+                                    <ul class="list-group"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                    <div class="form-group">
+
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" class="btn btn-blue" value="Zapisz" />
+
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+
+        </div>
+    </div>
+</div>

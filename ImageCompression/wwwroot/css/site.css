@@ -1,0 +1,151 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+padding: 30px 15px 0px 15px;
+
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+.carousel-overlay {
+    background-color: rgba(0,68,148,0.5);
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.overlay {
+    background-color: rgba(0,68,148,0.2);
+    z-index: 1;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+#admin-header{
+    padding-top:15px;
+
+}
+
+.header-col {
+    max-height:80px;
+    margin:10px 0px 15px 0px;
+}
+.logo{
+    height:85%;
+    width:85%;
+}
+
+.bg-navbar-blue {
+    background-color: #004494;
+}
+
+.statistic-col {
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(195, 195,195);
+    text-align: center;
+    padding:10px;
+}
+.statistic-text {
+    display: inline;
+    font-size: 3em;
+    font-weight:800;
+   color:rgb(95,95,95);
+}
+.text-grey-stat {
+    color: rgb(95,95,95);
+}
+.btn-yellow {
+    background-color: rgba(255,204,0,0.92) !important;
+    color: rgba(255,255,255,0.9) !important;
+}
+.btn-yellow:hover {
+    background-color: rgba(255,204,0,1) !important;
+    color: rgba(255,255,255,1) !important;
+}
+
+.btn-blue {
+    background-color: rgba(0,68,148,0.92) !important;
+    color: rgba(255,255,255,0.9) !important;
+}
+.btn-blue:hover {
+    background-color: rgba(0,68,148,1) !important;
+    color: rgba(255,255,255,1) !important;
+}
+
+.btn-white-border {
+    background-color: white;
+    color: rgba(0,68,148,1);
+    border: 1px solid rgba(0,68,148,1)
+}
+.btn-white-border:hover {
+        background-color: rgba(0,68,148,1);
+        color:white;
+}
+
+.offer-list {
+    padding-bottom: 5px;
+}
+#admin-header > li > a {
+    text-decoration: none;
+    background-color: #e2e2e2;
+    border-bottom: 3px solid #1468b2;
+    color: #1468b2 !important;
+}
+
+#admin-header>li{
+    float:left;
+}
+
+#admin-header > li > a:hover,
+#admin-header > li > a:focus{
+    text-decoration: none;
+    background-color: #1468b2;
+    border-bottom: 3px solid white;
+    color: white !important;
+    }
+#admin-header > li{
+    width:25% !important;
+    text-align:center !important;
+}
+.dataTables_filter {
+    float: right
+}
+
+.footer {
+    overflow: hidden;
+    bottom: 0px;
+    width: 100%;
+
+}
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+a.no-text-decoration {
+    text-decoration: none;
+    color: inherit;
+}

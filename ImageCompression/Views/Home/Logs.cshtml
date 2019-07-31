@@ -1,0 +1,73 @@
+﻿@model ImageCompression.ViewModel.HomeVM;
+
+@{
+    Layout = "_Layout";
+}
+
+
+
+<h2>Logi</h2>
+
+
+
+<table id="dt" class="table table-striped table-responsive-md" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th class="th-sm">
+                Nazwa pliku
+            </th>
+            <th class="th-sm">
+                Start procesowania
+            </th>
+            <th class="th-sm">
+                Koniec procesowania
+            </th>
+            <th class="th-sm">
+                Czas kompresji [ms]
+            </th>
+            <th class="th-sm">
+                Rozmiar przed kompresja
+            </th>
+            <th class="th-sm">
+                Rozmiar po kompresji
+            </th>
+            <th class="th-sm">
+                Kompresja [%]
+            </th>
+            <th />
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.imageLogsVM)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.filename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.processingStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.processingEnd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.processingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeBeforeCompression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sizeAfterCompression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem =>  item.compressionPercentage)
+            </td>
+            <td>
+                <a asp-controller="Home" asp-action="Download" asp-route-imageID="@item.imageID">Pobierz</a> |
+                <a asp-controller="Home" asp-action="DownloadMetadata" asp-route-imageID="@item.imageID">Metadane</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>
